@@ -1,12 +1,32 @@
-now I did
-Lets Kill @berserk right now?
-Ttesttt
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
+namespace GasolineCalc
+{
+    class RekenSom
+    {
 
-*Killed @Berserk Sorry!*
+        public double verbruik;
+        public double kilometers;
+        public double benzineprijs;
+        
 
-Reviving @Berserk...
+        public RekenSom(double verbruik, double kilometers, double benzineprijs)
+        {
+            this.verbruik = verbruik;
+            this.kilometers = kilometers;
+            this.benzineprijs = benzineprijs;
+        }
 
-*Berserk is alive!!!!*
-
-*Kills @berserk again..Sorry!*
+        public void GegevensUitvoer()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("U verbruikt : " + verbruik + "Op 100 kilometer");
+            Console.WriteLine("U rijd : " + kilometers + "kilometers voor deze trip");
+            double kosten = verbruik / kilometers;
+        }
+    }
+}
